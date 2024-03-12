@@ -8,7 +8,7 @@ const buttonStyles = cva(
         variants: {
             variant: {
                 default: ["bg-green-200", "hover:bg-green-100"],
-                hover: ["hover:bg-green-200"],
+                hover: ["hover:bg-[#f1f5f980]"],
                 dark: ["bg-green-900", "hover:bg-slate-800", "text-white"],
                 gradient: [
                     "bg-gradient-to-br from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500",
@@ -45,7 +45,7 @@ const buttonStyles = cva(
 
 type buttonType = VariantProps<typeof buttonStyles> & ComponentProps<"button">;
 
-const Button = ({ variant, size, className, ...props }: buttonType) => {
+const AppButton = ({ variant, size, className, ...props }: buttonType) => {
     return (
         <button
             {...props}
@@ -54,4 +54,4 @@ const Button = ({ variant, size, className, ...props }: buttonType) => {
     );
 };
 
-export default Button;
+export default AppButton;

@@ -1,24 +1,46 @@
 "use client";
-
-import React from "react";
 import {
     NavigationMenu,
     NavigationMenuContent,
-    NavigationMenuIndicator,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    NavigationMenuViewport,
-    navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
 import logo from "../public/assests/logo.svg";
 import flag from "../public/assests/singapore-flag.svg";
 import Link from "next/link";
-import AppButton from "./common/AppButton";
+import AppButton from "../common/AppButton";
+import NavListItem from "./NavbarListItem";
 
 const Navbar = () => {
+    const components = [
+        {
+            title: "Beginner's Guide to EVs",
+            href: "#",
+            description:
+                " An introduction to electric vehicles, their technology, and benefits.",
+        },
+        {
+            title: "EV Charging Guide",
+            href: "#",
+            description:
+                "Information on charging infrastructure, home, and public charging.",
+        },
+        {
+            title: "Driving an EV: Tips and Tricks",
+            href: "#",
+            description:
+                " Advice on driving techniques to maximize your electric vehicle's range.",
+        },
+        {
+            title: "Environmental Benefits of EVs",
+            href: "#",
+            description:
+                " How electric vehicles contribute to reducing emissions and improving air quality.",
+        },
+    ];
     return (
         <div className=" py-6 px-3 sm:px-32">
             <div className="flex justify-between items-center   ">
@@ -74,9 +96,17 @@ const Navbar = () => {
                                     EV Guides
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
-                                    <NavigationMenuLink className="p-3">
-                                        Link
-                                    </NavigationMenuLink>
+                                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                                        {components.map((component) => (
+                                            <NavListItem
+                                                key={component.title}
+                                                title={component.title}
+                                                href={component.href}
+                                            >
+                                                {component.description}
+                                            </NavListItem>
+                                        ))}
+                                    </ul>
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                         </NavigationMenuList>

@@ -1,7 +1,11 @@
 import React from "react";
 
 const CarInfoPage = () => {
-    return <div>CarInfoPage</div>;
+    return (
+        <div>
+            <div className="font-graphic">Hello World</div>
+        </div>
+    );
 };
 
 export default CarInfoPage;

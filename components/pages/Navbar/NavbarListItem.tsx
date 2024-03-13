@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { NavigationMenuLink } from "../ui/navigation-menu";
+import { NavigationMenuLink } from "../../ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 

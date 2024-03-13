@@ -8,11 +8,11 @@ import {
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
-import logo from "../../public/assests/logo.svg";
-import singaporeFlag from "../../public/assests/singapore-flag.svg";
-import indianFlag from "../../public/assests/indiaFlag.png";
+import logo from "@/assests/logo.svg";
+import singaporeFlag from "@/assests/singapore-flag.svg";
+import indianFlag from "@/assests/indiaFlag.png";
 import Link from "next/link";
-import AppButton from "../common/AppButton";
+import AppButton from "@/common/AppButton";
 import NavListItem from "./NavbarListItem";
 import {
     Select,
@@ -21,7 +21,7 @@ import {
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from "../ui/select";
+} from "../../ui/select";
 
 const Navbar = () => {
     const components = [

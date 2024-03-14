@@ -10,23 +10,23 @@ const About = () => {
         <div className="h-72 bg-[#FBFCFE] px-14 py-12">
             <p className="font-bold text-2xl mb-12">About this car</p>
 
-            <div className="flex items-center justify-between">
-                <div className="flex items-start gap-4">
+            <div className="flex items-center justify-between gap-1 flex-wrap">
+                <div className="flex items-center justify-start gap-4 mb-3">
                     <Image src={dieselFuel} alt="diesel fuel" />
                     <p className="font-medium">Diesel Fuel</p>
                 </div>
-                <div className="flex items-start gap-4">
+                <div className="flex items-center justify-start gap-4 mb-3">
                     <Image
                         src={automaticTransmission}
                         alt="Automatic Transmission"
                     />
                     <p className="font-medium">Automatic Transmission</p>
                 </div>
-                <div className="flex items-start gap-4">
+                <div className="flex items-center justify-start gap-4 mb-3">
                     <Image src={miles} alt="diesel fuel" />
                     <p className="font-medium">11,594 Miles</p>
                 </div>
-                <div className="flex items-start gap-4">
+                <div className="flex items-center justify-start gap-4 mb-3">
                     <Image src={displacement} alt="diesel fuel" />
                     <p className="font-medium">Displacement</p>
                 </div>

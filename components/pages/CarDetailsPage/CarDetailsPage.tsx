@@ -2,6 +2,7 @@
 import React from "react";
 import CarImgCarousel from "./CarImgCarousel";
 import CarInfoPage from "./CarInfoPage";
+import About from "../About/About";
 
 const CarDetailsPage = () => {
     return (
@@ -15,6 +16,7 @@ const CarDetailsPage = () => {
                     <CarInfoPage />
                 </div>
             </div>
+            <About />
         </div>
     );
 };

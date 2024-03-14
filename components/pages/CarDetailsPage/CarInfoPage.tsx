@@ -74,11 +74,11 @@ const CarInfoPage = () => {
                             with a large touchscreen display.
                         </AccordionContent>
                     </AccordionItem>
-                    <AccordionItem value="item-3">
-                        <AccordionTrigger className="font-bold text-xs">
+                    <AccordionItem value="item-3 " className="border-none">
+                        <AccordionTrigger className="font-bold text-xs ">
                             Delivery & Warranty
                         </AccordionTrigger>
-                        <AccordionContent className="text-xs">
+                        <AccordionContent className="text-xs ">
                             The 2021 Tesla Model 3 offers delivery options and a
                             warranty package that includes four years or 50,000
                             miles of coverage for the vehicle and eight years or

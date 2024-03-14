@@ -7,7 +7,7 @@ const CarDetailsPage = () => {
     return (
         <div>
             <div className="flex flex-col sm:flex-row">
-                <div className="sm:w-4/6 w-full bg-[#FBFCFE] h-screen">
+                <div className="sm:w-4/6 w-full bg-[#FBFCFE] ">
                     <CarImgCarousel />
                 </div>
 

@@ -157,12 +157,9 @@ const Navbar = () => {
 
                     <NavigationMenu>
                         <AppButton
-                            variant="hover"
-                            className="rounded-md text-sm font-semibold"
-                            size={"button"}
-                        >
-                            Log In/ Sign Up
-                        </AppButton>
+                            className="rounded-md text-sm font-semibold bg-transparent text-black   hover:bg-[#f1f5f980]"
+                            btnText="Log In/ Sign Up"
+                        />
                     </NavigationMenu>
                 </div>
             </div>

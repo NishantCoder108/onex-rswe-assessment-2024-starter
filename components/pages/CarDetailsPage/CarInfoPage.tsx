@@ -1,6 +1,6 @@
 import AppButton from "@/components/common/AppButton";
 import AppSelectColor from "@/components/common/AppSelectColor";
-import StarRating from "@/components/common/StarRating";
+import StarRating from "@/components/common/AppStarRating";
 import {
     Accordion,
     AccordionContent,

@@ -10,8 +10,18 @@ import {
     carInfoDetails,
     specificationData,
 } from "@/lib/data";
+import AppSkeleton from "@/components/common/AppSkeleton";
 
 const CarDetailsPage = () => {
+    if (
+        !carCarouselList ||
+        !specificationData ||
+        !aboutData ||
+        !carInfoDetails
+    ) {
+        return <AppSkeleton />;
+    }
+
     return (
         <div>
             <div className="flex flex-col sm:flex-row">

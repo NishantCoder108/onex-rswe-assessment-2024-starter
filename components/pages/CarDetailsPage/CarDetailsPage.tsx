@@ -4,7 +4,7 @@ import CarImgCarousel from "./CarImgCarousel";
 import CarInfoPage from "./CarInfoPage";
 import About from "../About/About";
 import Specification from "../Specification";
-import { aboutData, specificationData } from "@/lib/data";
+import { aboutData, carInfoDetails, specificationData } from "@/lib/data";
 
 const CarDetailsPage = () => {
     const {
@@ -22,7 +22,7 @@ const CarDetailsPage = () => {
                 </div>
 
                 <div className="sm:w-1/3 w-full mt-4 sm:mt-0">
-                    <CarInfoPage />
+                    <CarInfoPage carInfo={carInfoDetails} />
                 </div>
             </div>
             <About aboutData={aboutData} />

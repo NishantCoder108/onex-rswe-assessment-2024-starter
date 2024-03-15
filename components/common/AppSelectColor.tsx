@@ -2,31 +2,17 @@ import React, { useState } from "react";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { cn } from "@/lib/utils";
 
-const AppSelectColor = () => {
-    const listColor = [
-        {
-            hexColor: "#0036C3",
-            color: "blue",
-        },
-        {
-            hexColor: "#D43A55",
-            color: "red",
-        },
-        {
-            hexColor: "#030303",
-            color: "black",
-        },
-        {
-            hexColor: "#00ff11",
-            color: "green",
-        },
-        {
-            hexColor: "#FFFFFF",
-            color: "silver",
-        },
-    ];
+interface IAvailableColor {
+    hexColor: string;
+    color: string;
+}
 
-    const [selectedColor, setSelectedColor] = useState(listColor[4].color);
+interface IProps {
+    availableColor: IAvailableColor[];
+}
+
+const AppSelectColor = ({ availableColor }: IProps) => {
+    const [selectedColor, setSelectedColor] = useState("silver");
 
     const handleColorChange = (color: string) => {
         console.log({ color });
@@ -42,7 +28,7 @@ const AppSelectColor = () => {
                 className="flex items-center justify-between "
             >
                 <div className="flex gap-4 items-center justify-items-center">
-                    {listColor.map((item, index) => (
+                    {availableColor?.map((item, index) => (
                         <div
                             key={index}
                             className={cn(

@@ -4,7 +4,7 @@ import CarImgCarousel from "./CarImgCarousel";
 import CarInfoPage from "./CarInfoPage";
 import About from "../About/About";
 import Specification from "../Specification";
-import { specificationData } from "@/lib/data";
+import { aboutData, specificationData } from "@/lib/data";
 
 const CarDetailsPage = () => {
     const {
@@ -25,7 +25,7 @@ const CarDetailsPage = () => {
                     <CarInfoPage />
                 </div>
             </div>
-            <About />
+            <About aboutData={aboutData} />
             <Specification
                 Exterior={Exterior}
                 Interior={Interior}

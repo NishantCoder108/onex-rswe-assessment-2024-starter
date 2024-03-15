@@ -1,3 +1,31 @@
+import dieselFuel from "@/assests/diesel-fuel.svg";
+import automaticTransmission from "@/assests/automatic-transmission.svg";
+import miles from "@/assests/Vector.svg";
+import displacement from "@/assests/displacement.svg";
+
+export const aboutData = [
+    {
+        imgUrl: dieselFuel,
+        label: "Fuel",
+        value: "Diesel Fuel",
+    },
+    {
+        label: "Transmission",
+        imgUrl: automaticTransmission,
+        value: "Automatic Transmission",
+    },
+    {
+        label: "Miles",
+        imgUrl: miles,
+        value: "11,594 Miles",
+    },
+    {
+        label: "Displacement",
+        imgUrl: displacement,
+        value: "3.5L Displacement",
+    },
+];
+
 export const specificationData = {
     Exterior: {
         ["Body Style"]: "Hatchback",

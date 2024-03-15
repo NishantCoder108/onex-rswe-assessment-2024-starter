@@ -3,8 +3,17 @@ import React from "react";
 import CarImgCarousel from "./CarImgCarousel";
 import CarInfoPage from "./CarInfoPage";
 import About from "../About/About";
+import Specification from "../Specification";
+import { specificationData } from "@/lib/data";
 
 const CarDetailsPage = () => {
+    const {
+        Exterior,
+        Interior,
+        "BEV Performance": BevPerformance,
+        Charging,
+    } = specificationData;
+
     return (
         <div>
             <div className="flex flex-col sm:flex-row">
@@ -17,6 +26,12 @@ const CarDetailsPage = () => {
                 </div>
             </div>
             <About />
+            <Specification
+                Exterior={Exterior}
+                Interior={Interior}
+                Charging={Charging}
+                BevPerformance={BevPerformance}
+            />
         </div>
     );
 };

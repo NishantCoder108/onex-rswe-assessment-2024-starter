@@ -7,41 +7,23 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel";
-import silverCar1 from "@/assests/cars/silver-car1.png";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { ThumbCarousel } from "./ThumbCarousel";
 import { useCallback, useEffect, useState } from "react";
 
-const CarImgCarousel = () => {
+interface ICarCarousel {
+    id: number;
+    imgSrc: StaticImageData;
+    alt: string;
+}
+
+interface IProps {
+    carCarousel: ICarCarousel[];
+}
+
+const CarImgCarousel = ({ carCarousel }: IProps) => {
     const [api, setApi] = useState<CarouselApi>();
     const [selectedCarousel, setSelectedCarousel] = useState(0);
-    const carCarouselList = [
-        {
-            id: 1,
-            imgSrc: silverCar1,
-            alt: "silver car 1",
-        },
-        {
-            id: 2,
-            imgSrc: silverCar1,
-            alt: "silver car 1",
-        },
-        {
-            id: 3,
-            imgSrc: silverCar1,
-            alt: "silver car 1",
-        },
-        {
-            id: 4,
-            imgSrc: silverCar1,
-            alt: "silver car 1",
-        },
-        {
-            id: 5,
-            imgSrc: silverCar1,
-            alt: "silver car 1",
-        },
-    ];
 
     const onThumbClick = useCallback(
         (index: number) => {
@@ -68,6 +50,8 @@ const CarImgCarousel = () => {
         };
     }, [api]);
 
+    if (!carCarousel) return "Loading...";
+
     return (
         <div className="flex items-center justify-evenly mt-12 flex-col ">
             <Carousel
@@ -75,7 +59,7 @@ const CarImgCarousel = () => {
                 className="w-full max-w-xs sm:max-w-sm  md:max-w-xl  xl:max-w-3xl"
             >
                 <CarouselContent>
-                    {carCarouselList.map((item, index) => (
+                    {carCarousel.map((item, index) => (
                         <CarouselItem key={index}>
                             <div className="p-1">
                                 <Card className="outline-none border-none shadow-none bg-transparent">
@@ -95,7 +79,7 @@ const CarImgCarousel = () => {
                 <CarouselNext className="bg-[#DDFFF7]" />
             </Carousel>
             <div className="flex  gap-4">
-                {carCarouselList.map((item, index) => (
+                {carCarousel.map((item, index) => (
                     <ThumbCarousel
                         key={index}
                         onClick={() => onThumbClick(index)}

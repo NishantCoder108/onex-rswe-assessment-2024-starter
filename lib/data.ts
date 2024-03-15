@@ -2,6 +2,35 @@ import dieselFuel from "@/assests/diesel-fuel.svg";
 import automaticTransmission from "@/assests/automatic-transmission.svg";
 import miles from "@/assests/Vector.svg";
 import displacement from "@/assests/displacement.svg";
+import silverCar1 from "@/assests/cars/silver-car1.png";
+
+export const carCarouselList = [
+    {
+        id: 1,
+        imgSrc: silverCar1,
+        alt: "silver car 1",
+    },
+    {
+        id: 2,
+        imgSrc: silverCar1,
+        alt: "silver car 1",
+    },
+    {
+        id: 3,
+        imgSrc: silverCar1,
+        alt: "silver car 1",
+    },
+    {
+        id: 4,
+        imgSrc: silverCar1,
+        alt: "silver car 1",
+    },
+    {
+        id: 5,
+        imgSrc: silverCar1,
+        alt: "silver car 1",
+    },
+];
 
 export const carInfoDetails = {
     isNew: true,

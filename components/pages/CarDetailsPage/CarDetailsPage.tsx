@@ -4,14 +4,19 @@ import CarImgCarousel from "./CarImgCarousel";
 import CarInfoPage from "./CarInfoPage";
 import About from "../About/About";
 import Specification from "../Specification";
-import { aboutData, carInfoDetails, specificationData } from "@/lib/data";
+import {
+    aboutData,
+    carCarouselList,
+    carInfoDetails,
+    specificationData,
+} from "@/lib/data";
 
 const CarDetailsPage = () => {
     return (
         <div>
             <div className="flex flex-col sm:flex-row">
                 <div className="sm:w-4/6 w-full bg-[#FBFCFE] ">
-                    <CarImgCarousel />
+                    <CarImgCarousel carCarousel={carCarouselList} />
                 </div>
 
                 <div className="sm:w-1/3 w-full mt-4 sm:mt-0">

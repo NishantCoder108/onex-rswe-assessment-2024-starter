@@ -3,6 +3,64 @@ import automaticTransmission from "@/assests/automatic-transmission.svg";
 import miles from "@/assests/Vector.svg";
 import displacement from "@/assests/displacement.svg";
 
+export const carInfoDetails = {
+    isNew: true,
+    name: "2021 Tesla Model 3",
+    vin: "JN1AZ0CPOBT009448",
+    rating: 5,
+    price: "41,103",
+    priceSymbol: "$",
+    availableColor: [
+        {
+            hexColor: "#0036C3",
+            color: "blue",
+        },
+        {
+            hexColor: "#D43A55",
+            color: "red",
+        },
+        {
+            hexColor: "#030303",
+            color: "black",
+        },
+        {
+            hexColor: "#00ff11",
+            color: "green",
+        },
+        {
+            hexColor: "#FFFFFF",
+            color: "silver",
+        },
+    ],
+
+    estimateTime: "16 Aug - 23 Aug",
+    moto: "Tesla believes in accelerating the world's transition to sustainable energy with electric cars.",
+
+    viewCollection: "View the Tesla collection",
+    viewCollectionUrl: "#",
+    carDetails: [
+        {
+            key: "Description",
+            desc: `The 2021 Tesla Model 3 offers sleek design,
+            impressive electric range, and cutting-edge
+            technology in a compact sedan package.`,
+        },
+        {
+            key: "Product Highlights",
+            desc: `The 2021 Tesla Model 3 boasts impressive electric
+            range, quick acceleration, and a minimalist interior
+            with a large touchscreen display.`,
+        },
+        {
+            key: "Delivery & Warranty",
+            desc: `The 2021 Tesla Model 3 offers delivery options and a
+            warranty package that includes four years or 50,000
+            miles of coverage for the vehicle and eight years or
+            100,000 miles for the battery and drive unit.`,
+        },
+    ],
+};
+
 export const aboutData = [
     {
         imgUrl: dieselFuel,

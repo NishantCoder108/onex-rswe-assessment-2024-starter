@@ -8,15 +8,20 @@ type KeyValuePairs = Record<string, string | number>;
 interface ISpecification {
     Exterior: KeyValuePairs;
     Interior: KeyValuePairs;
-    BevPerformance?: KeyValuePairs;
+    ["BEV Performance"]?: KeyValuePairs;
     Charging?: KeyValuePairs;
 }
-const Specification = ({
-    Exterior,
-    Interior,
-    BevPerformance,
-    Charging,
-}: ISpecification) => {
+
+interface IProps {
+    specificationData: ISpecification;
+}
+const Specification = ({ specificationData }: IProps) => {
+    const {
+        Exterior,
+        Interior,
+        "BEV Performance": BevPerformance,
+        Charging,
+    } = specificationData;
     return (
         <div className=" bg-[#FBFCFE] px-14 py-12">
             <p className="font-bold text-2xl mb-12">Specifications</p>

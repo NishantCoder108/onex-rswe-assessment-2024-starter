@@ -7,13 +7,6 @@ import Specification from "../Specification";
 import { aboutData, carInfoDetails, specificationData } from "@/lib/data";
 
 const CarDetailsPage = () => {
-    const {
-        Exterior,
-        Interior,
-        "BEV Performance": BevPerformance,
-        Charging,
-    } = specificationData;
-
     return (
         <div>
             <div className="flex flex-col sm:flex-row">
@@ -26,12 +19,7 @@ const CarDetailsPage = () => {
                 </div>
             </div>
             <About aboutData={aboutData} />
-            <Specification
-                Exterior={Exterior}
-                Interior={Interior}
-                Charging={Charging}
-                BevPerformance={BevPerformance}
-            />
+            <Specification specificationData={specificationData} />
         </div>
     );
 };

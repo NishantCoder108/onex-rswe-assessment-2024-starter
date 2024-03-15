@@ -4,11 +4,21 @@ import { Button } from "../ui/button";
 interface IButton {
     btnText: string;
     className?: string;
+    variant?:
+        | "link"
+        | "default"
+        | "destructive"
+        | "outline"
+        | "secondary"
+        | "ghost"
+        | null;
 }
-const AppButton = ({ btnText, className }: IButton) => {
+const AppButton = ({ btnText, className, ...props }: IButton) => {
     return (
         <div>
-            <Button className={className}>{btnText}</Button>
+            <Button {...props} className={className}>
+                {btnText}
+            </Button>
         </div>
     );
 };
